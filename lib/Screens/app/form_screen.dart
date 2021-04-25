@@ -8,9 +8,8 @@ import 'package:webviewDemo/form.dart';
 class FormScreen extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
 
-  // controller
-  final titleController = TextEditingController(); //รับค่าชื่อรายการ
-  final dogController = TextEditingController(); //รับตัวเลขจำนวนเงิน
+  final titleController = TextEditingController();
+  final dogController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,24 +24,25 @@ class FormScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 TextFormField(
-                  decoration: new InputDecoration(labelText: "ชื่อรายการ"),
+                  decoration: new InputDecoration(
+                      labelText: "ชื่อสัตว์หรือชนิดของสัตว์"),
                   autofocus: false,
                   controller: titleController,
                   validator: (String str) {
-                    //ชื่อรายการเป็นค่าว่าง
                     if (str.isEmpty) {
-                      return "กรุณาป้อนชื่อรายการ";
+                      return "กรุณาป้อนชื่อสัตว์หรือชนิดสัตว์ของคุณ";
                     }
                     return null;
                   },
                 ),
                 TextFormField(
-                  decoration: new InputDecoration(labelText: "จำนวนเงิน"),
+                  decoration:
+                      new InputDecoration(labelText: "หัวเรื่องที่นัดหมอ"),
                   autofocus: false,
                   controller: dogController,
                   validator: (String str) {
                     if (str.isEmpty) {
-                      return "กรุณาป้อนจำนวนเงิน";
+                      return "กรุณาป้อนหัวเรื่อง";
                     }
 
                     return null;
@@ -56,13 +56,10 @@ class FormScreen extends StatelessWidget {
                     if (formKey.currentState.validate()) {
                       var title = titleController.text;
                       var dog = dogController.text;
-                      //เตรียมข้อมูล
-                      Transactions statement = Transactions(
-                          title: title,
-                          dog: dog,
-                          date: DateTime.now()); //object
 
-                      //เรียก Provider
+                      Transactions statement = Transactions(
+                          title: title, dog: dog, date: DateTime.now());
+
                       var provider = Provider.of<TransactionProvider>(context,
                           listen: false);
                       provider.addTransaction(statement);

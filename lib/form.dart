@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webviewDemo/drawer_menu.dart';
+import 'package:webviewDemo/pages/multi_example.dart';
 import 'package:webviewDemo/providers/transaction_provider.dart';
 import 'package:webviewDemo/Screens/app/form_screen.dart';
 import 'package:webviewDemo/Screens/app/home_screen.dart';
@@ -47,14 +48,13 @@ class _MyHomePageState extends State<MyHomePage> {
         body: TabBarView(
           children: [HomeScreen(), FormScreen()],
         ),
-        bottomNavigationBar: TabBar(
-          tabs: [
-            Tab(
-              icon: Icon(Icons.list),
-              text: "รายการ",
-            ),
-            Tab(icon: Icon(Icons.add), text: "ข้อมูล")
-          ],
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => StartPage())),
+          },
+          child: Icon(Icons.add),
+          backgroundColor: Colors.blue,
         ),
       ),
     );

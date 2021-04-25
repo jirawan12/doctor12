@@ -28,7 +28,7 @@ class MyProfile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'My Profile',
+          'ขอมูลส่ววนตัว',
           style: contentStyle,
         ),
         automaticallyImplyLeading: true,
@@ -54,57 +54,8 @@ class MyProfile extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(50.0),
                     child: Image.asset(
-                      "assets/images/mew.JPG",
+                      "assets/images/gaan.png",
                       height: 280.0,
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  ListTile(
-                    leading: Icon(Icons.person),
-                    title: Align(
-                      child: new Text(
-                        'สาขาวิชาวิทยาการคอมพิวเตอร์\nคณะศิลปศาสตร์และวิทยาศาสตร์',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1, 0),
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "ประวัติการศึกษา",
-                      style: contentBulletStyle,
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.arrow_forward),
-                    title: Align(
-                      child: new Text(
-                        'จบชั้นประถมศึกษาชั้นป.1 - 6 โรงเรียนวัดมหาพุทธาราม',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1.8, 0),
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.arrow_forward),
-                    title: Align(
-                      child: new Text(
-                        'จบชั้นมัธยมศึกษาตอนต้นปีที่ 1 - 3 โรงเรียนกำแพง',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1.8, 0),
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.arrow_forward),
-                    title: Align(
-                      child: new Text(
-                        'จบชั้นมัธยมศึกษาตอนปลายปีที่ 4 - 6 วิทยาลัยเทคนิคศรีสะเกษ',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1.8, 0),
                     ),
                   ),
                   SizedBox(height: sizeBox),
@@ -150,87 +101,6 @@ class MyProfile extends StatelessWidget {
                     title: Align(
                       child: new Text(
                         'Wachirporn.mara61@sskru.ac.th',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1, 0),
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "ประวัติการทำงาน",
-                      style: contentBulletStyle,
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.arrow_forward),
-                    title: Align(
-                      child: new Text(
-                        'เป็นนักศึกษา\n\nคณะศิลปศาสตร์และวิทยาศาสตร์,\n\nมหาวิทยาลัยราชภัฏศรีสะเกษ',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1.8, 0),
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "ความสามารถพิเศษ",
-                      style: contentBulletStyle,
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  ListTile(
-                    leading: Icon(Icons.developer_board),
-                    title: Align(
-                      child: new Text(
-                        'ตัดต่อ',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1, 0),
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  ListTile(
-                    leading: Icon(Icons.developer_board),
-                    title: Align(
-                      child: new Text(
-                        ' โปรแกรม adobe',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1, 0),
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  ListTile(
-                    leading: Icon(Icons.developer_board),
-                    title: Align(
-                      child: new Text(
-                        'แต่งภาพ ',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1, 0),
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  ListTile(
-                    leading: Icon(Icons.developer_board),
-                    title: Align(
-                      child: new Text(
-                        'การพัฒนาระบบงานเว็บเชอร์วิสด้วย Django Rest Framework',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1, 0),
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  ListTile(
-                    leading: Icon(Icons.developer_board),
-                    title: Align(
-                      child: new Text(
-                        'การพัฒนาโมบายแอพพลิเคชันด้วย Flutter',
                         style: contentStyle,
                       ),
                       alignment: Alignment(-1, 0),

@@ -2,6 +2,7 @@ import 'dart:collection';
 
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:webviewDemo/Screens/app/form_screen.dart';
 import 'package:webviewDemo/drawer_menu.dart';
 
 import '../utils.dart';
@@ -115,8 +116,15 @@ class _StartPageState extends State<StartPage> {
                         borderRadius: BorderRadius.circular(12.0),
                       ),
                       child: ListTile(
-                        onTap: () => print('${value[index]}'),
-                        title: Text('${value[index]}'),
+                        leading: Icon(Icons.add),
+                        title: Text('ว่าง'),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FormScreen()),
+                          );
+                        },
                       ),
                     );
                   },

@@ -1,7 +1,6 @@
 class Transactions {
-  String title; //ชื่อรายการ
-  String dog; //จำนวนเงิน
-  DateTime date; //วันที่ เวลา บันทึกรายการ
-
+  String title;
+  String dog;
+  DateTime date;
   Transactions({this.title, this.dog, this.date});
 }

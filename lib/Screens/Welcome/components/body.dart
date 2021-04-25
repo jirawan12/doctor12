@@ -16,17 +16,17 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "WELCOME TO EDU",
+              "ยินดีต้อนรับ",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: size.height * 0.05),
             SvgPicture.asset(
-              "assets/icons/chat.svg",
+              "assets/icons/kku.svg",
               height: size.height * 0.45,
             ),
             SizedBox(height: size.height * 0.05),
             RoundedButton(
-              text: "LOGIN",
+              text: "เข้าสู่ระบบ",
               press: () {
                 Navigator.push(
                   context,
@@ -39,7 +39,7 @@ class Body extends StatelessWidget {
               },
             ),
             RoundedButton(
-              text: "SIGN UP",
+              text: "สมัครสมาชิก",
               color: kPrimaryLightColor,
               textColor: Colors.black,
               press: () {

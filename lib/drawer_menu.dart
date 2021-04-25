@@ -19,11 +19,12 @@ class _DrawerMenuState extends State<DrawerMenu> {
         padding: EdgeInsets.zero,
         children: <Widget>[
           UserAccountsDrawerHeader(
-            accountName: Text('Wachiraporn & Suphattra '),
-            accountEmail: Text('Wachirporn.mara61@sskru.ac.th'),
+            accountName: Text('คลีนิคสัตว์'),
+            accountEmail: Text('เมนู'),
             currentAccountPicture: CircleAvatar(
-              child: FlutterLogo(
-                size: 40.0,
+              child: Image.asset(
+                "assets/images/gaan.png",
+                height: 100.9,
               ),
               backgroundColor: Colors.white,
             ),

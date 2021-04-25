@@ -23,7 +23,7 @@ final kEvents = LinkedHashMap<DateTime, List<Event>>(
 final _kEventSource = Map.fromIterable(List.generate(50, (index) => index),
     key: (item) => DateTime.utc(2020, 10, item * 5),
     value: (item) => List.generate(
-        item % 4 + 1, (index) => Event('ว่าง $item | ${index + 1}')))
+        item % 4 + 1, (index) => Event('Event $item | ${index + 1}')))
   ..addAll({
     DateTime.now(): [
       Event('Today\'s ว่าง 1'),
