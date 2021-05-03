@@ -266,7 +266,7 @@ class FormScreen extends StatelessWidget {
 
 ## 4.รายการ
 
-```dart
+
  import 'package:flutter/material.dart';
  import 'package:flutter/services.dart';
  import 'package:http/http.dart';
@@ -368,8 +368,6 @@ class FormScreen extends StatelessWidget {
     },
   );
 }
-```
-
 ## ตัวอย่างหน้าจอ
 
 ![img](./123.png)
