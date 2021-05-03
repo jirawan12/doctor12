@@ -369,8 +369,4 @@ Future<ConfirmAction> _asyncConfirmDialog(BuildContext context) async {
 }
 ## ตัวอย่างหน้าจอ
 
-![img](./123.png)
-
-#   d o c t o r 
- 
- 
+![img](./123png)
