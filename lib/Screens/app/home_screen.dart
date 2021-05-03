@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:http/http.dart';
 import 'package:webviewDemo/datadase/Transactions.dart';
 import 'package:webviewDemo/drawer_menu.dart';
 import 'package:webviewDemo/providers/transaction_provider.dart';
@@ -43,9 +44,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemBuilder: (context, int index) {
                     Transactions data = provider.transactions[index];
                     return Card(
-                      elevation: 5,
+                      elevation: 3,
                       margin: const EdgeInsets.symmetric(
-                          vertical: 8, horizontal: 5),
+                          vertical: 7, horizontal: 5),
                       child: ListTile(
                         leading: CircleAvatar(
                           radius: 30,
@@ -54,8 +55,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         title: Text(data.dog),
-                        subtitle:
-                            Text(DateFormat("dd/MM/yyyy").format(data.date)),
+                        subtitle: IconButton(
+                          icon: const Icon(Icons.delete),
+                          onPressed: () async {
+                            final ConfirmAction action =
+                                await _asyncConfirmDialog(context);
+                            print("Confirm Action $action");
+                          },
+                        ),
                       ),
                     );
                   });
@@ -63,4 +70,32 @@ class _HomeScreenState extends State<HomeScreen> {
           },
         ));
   }
+}
+
+enum ConfirmAction { Cancel, Accept }
+Future<ConfirmAction> _asyncConfirmDialog(BuildContext context) async {
+  return showDialog<ConfirmAction>(
+    context: context,
+    barrierDismissible: false, // user must tap button for close dialog!
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text('ลบรายการ'),
+        content: const Text('คุณต้องการลบจริงหรือไม่'),
+        actions: <Widget>[
+          FlatButton(
+            child: const Text('ยกเลิก'),
+            onPressed: () {
+              Navigator.of(context).pop(ConfirmAction.Cancel);
+            },
+          ),
+          FlatButton(
+            child: const Text('ตกลง'),
+            onPressed: () {
+              Navigator.of(context).pop(ConfirmAction.Accept);
+            },
+          )
+        ],
+      );
+    },
+  );
 }
