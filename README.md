@@ -26,7 +26,7 @@
 
 โปรแกรมแอพพลิเคชั่นเกี่ยวกับ การจองคิวคลินิกสัตว์ ประกอบด้วย 4 หน้า ได้แก่
 
-1.หน้า LOGIN 
+## 1.หน้า LOGIN 
 
 import 'package:flutter/material.dart';
 import 'package:webviewDemo/Screens/Login/components/body.dart';
@@ -40,7 +40,7 @@ class LoginScreen extends StatelessWidget {
   }
 }
 
-2.หน้า ตารางคิวว่าง
+## 2.หน้า ตารางคิวว่าง
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
@@ -266,21 +266,21 @@ class FormScreen extends StatelessWidget {
 
 4.รายการ
 
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:http/http.dart';
-import 'package:webviewDemo/datadase/Transactions.dart';
-import 'package:webviewDemo/drawer_menu.dart';
-import 'package:webviewDemo/providers/transaction_provider.dart';
-import 'package:intl/intl.dart';
-import 'package:provider/provider.dart';
+ import 'package:flutter/material.dart';
+ import 'package:flutter/services.dart';
+ import 'package:http/http.dart';
+ import 'package:webviewDemo/datadase/Transactions.dart';
+ import 'package:webviewDemo/drawer_menu.dart';
+ import 'package:webviewDemo/providers/transaction_provider.dart';
+ import 'package:intl/intl.dart';
+ import 'package:provider/provider.dart';
 
-class HomeScreen extends StatefulWidget {
+ class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     // TODO: implement initState
@@ -340,8 +340,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-enum ConfirmAction { Cancel, Accept }
-Future<ConfirmAction> _asyncConfirmDialog(BuildContext context) async {
+ enum ConfirmAction { Cancel, Accept }
+ Future<ConfirmAction> _asyncConfirmDialog(BuildContext context) async {
   return showDialog<ConfirmAction>(
     context: context,
     barrierDismissible: false, // user must tap button for close dialog!
